@@ -1,5 +1,6 @@
 require "iostrust/version"
 require "iostrust/simulator"
+require "iostrust/certificate"
 
 module Iostrust
   private
@@ -16,7 +17,7 @@ module Iostrust
   end
 
   public
-  def self.simulators
+  def self.simulators_paths
     simulators = []
     SIMULATOR_HOME_LIBRARY_PATTERNS.each do |pattern|
       found_paths = Dir.glob(path_for_pattern(pattern))

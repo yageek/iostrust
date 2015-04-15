@@ -1,0 +1,31 @@
+#! /usr/bin/ruby
+
+require 'rubygems'
+require '../lib/iostrust.rb'
+require 'commander/import'
+
+program :name, 'ios Trust'
+program :version, Iostrust::VERSION.to_s
+program :description, 'Add cert to iOS device simulator trusted key store'
+
+default_command :add
+
+command :add do |c|
+  c.syntax = 'iostrust add'
+  c.action do |args|
+
+    if args.size < 1
+      puts "No certificates specified."
+    else
+      certs_to_add = []
+      args.each do |cert_path|
+        certs_to_add << Iostrust::Certificate.new(cert_path)
+      end
+
+      Iostrust.simulators_paths.each do |simulator_path|
+        simulator = Iostrust::Simulator.new(simulator_path)
+        simulator.add_certs(certs_to_add)
+      end
+    end
+  end
+end

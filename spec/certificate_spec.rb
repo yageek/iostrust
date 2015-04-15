@@ -15,7 +15,7 @@ describe 'Certificate loading' do
   end
 
   it 'should add cert to database' do
-      Iostrust.simulators.each do |sim_path|
+      Iostrust.simulators_paths.each do |sim_path|
         sim = Iostrust::Simulator.new(sim_path)
         sim.restore
         sim.add_cert(@cert)

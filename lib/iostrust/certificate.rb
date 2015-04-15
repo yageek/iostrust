@@ -17,6 +17,10 @@ PLIST
       @cert = OpenSSL::X509::Certificate.new raw_cert
     end
 
+    def cert_name
+      @cert.subject.to_s
+    end
+
     def tset
       return @@PLIST
     end
