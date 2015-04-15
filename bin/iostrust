@@ -1,8 +1,8 @@
 #! /usr/bin/ruby
 
 require 'rubygems'
-require '../lib/iostrust.rb'
 require 'commander/import'
+require 'iostrust'
 
 program :name, 'ios Trust'
 program :version, Iostrust::VERSION.to_s
