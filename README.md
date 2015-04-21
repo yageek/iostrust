@@ -3,7 +3,7 @@
 This gem allows you to add trust certificates into the ios simulators.
 
 The work is based on the *IOSTrustStore Structure* specification file
-from //https://github.com/ADVTOOLS/ADVTrustStore
+from https://github.com/ADVTOOLS/ADVTrustStore
 
 ## Installation
 
