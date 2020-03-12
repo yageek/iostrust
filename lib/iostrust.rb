@@ -8,6 +8,7 @@ module Iostrust
       "Application Support/iPhone Simulator/3.*/Library/",
       "Application Support/iPhone Simulator/4.*/Library/",
       "Developer/CoreSimulator/Devices/**/data/Library/",
+      "Developer/XCTestDevices/**/data/Library/",
       "Application Support/iPhone Simulator/User/Library/"
   ]
 
